@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /activate-license.html
+Disallow: /manage-license.html
+Disallow: /signin.html
+
+Sitemap: https://keyflow.live/sitemap.xml

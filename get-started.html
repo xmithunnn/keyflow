@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Get Started | Keyflow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Download Keyflow free or choose a paid plan. Free gives you 2 runs per week with no account needed. Paid plans unlock unlimited runs.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://keyflow.live/get-started.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Get Started | Keyflow">
+  <meta property="og:description" content="Download Keyflow free or choose a paid plan. Free gives you 2 runs per week with no account needed. Paid plans unlock unlimited runs.">
+  <meta property="og:url"         content="https://keyflow.live/get-started.html">
+  <meta property="og:image"       content="https://keyflow.live/og.png">
+  <meta property="og:site_name"   content="Keyflow">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Get Started | Keyflow">
+  <meta name="twitter:description" content="Download Keyflow free or choose a paid plan. Free gives you 2 runs per week with no account needed. Paid plans unlock unlimited runs.">
+  <meta name="twitter:image"       content="https://keyflow.live/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#2563eb;--blue-hover:#1d4ed8;--blue-dim:rgba(37,99,235,0.08);
+      --blue-light:#eff6ff;--blue-glow:rgba(37,99,235,0.22);
+      --text:#111;--muted:#64748b;--faint:#94a3b8;
+      --border:rgba(0,0,0,0.1);--border-dark:rgba(0,0,0,0.16);
+      --gray-bg:#f7f7f7;--green:#16a34a;--green-bg:#dcfce7;
+      --shadow-sm:0 1px 2px rgba(0,0,0,0.08),inset 0 -0.5px 0 rgba(0,0,0,0.1);
+      --shadow-card:0 2px 4px rgba(10,10,10,0.04),0 8px 16px -4px rgba(10,10,10,0.06),0 0 0 0.5px rgba(10,10,10,0.1);
+    }
+    body{font-family:'Inter',-apple-system,sans-serif;font-size:15px;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+    .nav-inner{width:100%;max-width:1100px;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.3px}
+    .nav-logo img{border-radius:7px;display:block;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+    .nav-links a{padding:6px 12px;font-size:14px;font-weight:500;color:var(--muted);border-radius:8px;transition:color 0.18s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-right{display:flex;align-items:center;gap:8px}
+    .btn-ghost{padding:8px 12px;font-size:14px;font-weight:500;color:var(--muted);border-radius:8px;transition:color 0.18s;display:inline-block}
+    .btn-ghost:hover{color:var(--text)}
+    .btn-solid{padding:9px 16px;font-size:14px;font-weight:600;color:var(--text);background:#fff;border-radius:8px;border:0.5px solid var(--border-dark);box-shadow:var(--shadow-sm);transition:all 0.15s;display:inline-block}
+    .btn-solid:hover{background:var(--gray-bg)}
+    @media(max-width:700px){.nav-links{display:none}.nav-inner{padding:0 20px}}
+    /* FOOTER */
+    footer{padding:48px 40px 28px;border-top:1px solid var(--border);background:#fff}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-top{display:flex;gap:40px;margin-bottom:40px}
+    .footer-brand{flex:0 0 240px}
+    .footer-brand-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin-bottom:12px}
+    .footer-brand-logo img{border-radius:6px;display:block}
+    .footer-brand p{font-size:13.5px;color:var(--muted);line-height:1.65}
+    .footer-cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .footer-col h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:12px}
+    .footer-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px;transition:color 0.18s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid var(--border)}
+    .footer-bottom p{font-size:12.5px;color:var(--faint)}
+    @media(max-width:900px){.footer-top{flex-direction:column}.footer-cols{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-cols{grid-template-columns:1fr}}
+    /* HERO */
+    .hero{background:linear-gradient(180deg,#2563eb 0%,#4e80ee 16%,#6d97f1 27%,#9bb7f5 42%,#ccd9fa 64%,#e8effe 80%,#fff 100%);padding:80px 40px 96px;text-align:center}
+    .hero-inner{max-width:580px;margin:0 auto}
+    .hero h1{font-size:56px;font-weight:600;color:#fff;letter-spacing:-0.04em;line-height:1.1;margin-bottom:18px}
+    .hero p{font-size:17px;color:rgba(255,255,255,0.75);line-height:1.65;margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto}
+    .hero-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+    .btn-white{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;font-size:15px;font-weight:700;color:var(--blue);background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.08);box-shadow:var(--shadow-sm);transition:all 0.15s}
+    .btn-white:hover{background:#f0f4ff;transform:translateY(-1px)}
+    .btn-outline-white{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;font-size:15px;font-weight:600;color:#fff;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.28);border-radius:10px;transition:all 0.15s}
+    .btn-outline-white:hover{background:rgba(255,255,255,0.2)}
+    .hero-note{font-size:13px;color:rgba(255,255,255,0.55)}
+    /* STEPS */
+    .steps-bar{background:#fff;padding:56px 40px}
+    .steps-bar-inner{max-width:900px;margin:0 auto;text-align:center}
+    .steps-bar-inner h2{font-size:30px;font-weight:700;letter-spacing:-0.04em;margin-bottom:40px}
+    .steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    .step-card{text-align:center}
+    .step-num2{width:44px;height:44px;border-radius:12px;background:var(--blue-dim);color:var(--blue);font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+    .step-card h3{font-size:16px;font-weight:700;letter-spacing:-0.03em;margin-bottom:8px}
+    .step-card p{font-size:14px;color:var(--muted);line-height:1.7}
+    /* PRICING */
+    .pricing{background:var(--gray-bg);padding:72px 40px}
+    .pricing-inner{max-width:900px;margin:0 auto}
+    .pricing-head{text-align:center;margin-bottom:40px}
+    .pricing-head h2{font-size:32px;font-weight:700;letter-spacing:-0.04em;margin-bottom:10px}
+    .pricing-head p{font-size:16px;color:var(--muted)}
+    .pricing-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .pcard{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px;transition:transform 0.2s,box-shadow 0.2s;position:relative}
+    .pcard:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.1)}
+    .pcard.featured{border:2px solid var(--blue);background:linear-gradient(180deg,rgba(37,99,235,0.03) 0%,#fff 100%)}
+    .pcard-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:100px;white-space:nowrap}
+    .pcard-tier{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+    .pcard.featured .pcard-tier{color:var(--blue)}
+    .pcard-price{display:flex;align-items:baseline;gap:2px;margin-bottom:4px}
+    .pcard-dollar{font-size:20px;font-weight:700;margin-top:4px}
+    .pcard-amt{font-size:46px;font-weight:700;letter-spacing:-0.05em;line-height:1}
+    .pcard-per{font-size:14px;color:var(--muted)}
+    .pcard-billed{font-size:12px;color:var(--faint);min-height:18px;margin-bottom:22px}
+    .pcard-divider{height:1px;background:var(--border);margin-bottom:18px}
+    .pf{display:flex;align-items:flex-start;gap:9px;margin-bottom:8px;font-size:14px;color:var(--muted)}
+    .pf .ck{color:var(--green);font-weight:700;font-size:12px;flex-shrink:0;margin-top:1px}
+    .pf .xx{color:#ccc;font-size:12px;flex-shrink:0;margin-top:1px}
+    .pf.on{color:var(--text)}
+    .pcard-btn{width:100%;margin-top:22px;padding:11px;border-radius:100px;font-size:14px;font-weight:600;transition:all 0.15s;cursor:pointer;font-family:inherit}
+    .pcard-btn.outline{border:0.5px solid var(--border-dark);color:var(--text);background:#fff;box-shadow:var(--shadow-sm)}
+    .pcard-btn.outline:hover{background:var(--gray-bg)}
+    .pcard-btn.fill{background:var(--blue);color:#fff;border:1px solid rgba(0,0,0,0.12);box-shadow:var(--shadow-sm)}
+    .pcard-btn.fill:hover{background:var(--blue-hover)}
+    @media(max-width:700px){.pricing-cards,.steps-row{grid-template-columns:1fr}.hero h1{font-size:38px}.hero,.steps-bar,.pricing{padding-left:20px;padding-right:20px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Keyflow",
+            "item": "https://keyflow.live"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://keyflow.live/get-started.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Pricing",
+        "description": "Download free or upgrade to a paid plan",
+        "url": "https://keyflow.live/get-started.html",
+        "isPartOf": {"@id": "https://keyflow.live/#website"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+      Keyflow
+    </a>
+    <ul class="nav-links">
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/how-it-works.html">How it works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/signin.html" class="btn-ghost">Sign in</a>
+      <a href="/get-started.html" class="btn-solid">Start free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Stop typing.<br>Start flowing.</h1>
+    <p>Download free and run it in under a minute. Upgrade whenever you need unlimited runs.</p>
+    <div class="hero-btns">
+      <a href="/" class="btn-white"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download Free</a>
+      <a href="#pricing" class="btn-outline-white">See pricing</a>
+    </div>
+    <p class="hero-note">Free tier available. No account needed.</p>
+  </div>
+</div>
+
+<div class="steps-bar">
+  <div class="steps-bar-inner">
+    <h2>Up and running in three steps.</h2>
+    <div class="steps-row">
+      <div class="step-card">
+        <div class="step-num2">1</div>
+        <h3>Download and install</h3>
+        <p>Download the zip, run the install script, load unpacked in Chrome. Under a minute start to finish.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num2">2</div>
+        <h3>Paste and configure</h3>
+        <p>Paste your text, set your WPM, toggle the behaviour modes you want. No account needed for free.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num2">3</div>
+        <h3>Click in and hit Run</h3>
+        <p>Click into any text field, hit Start. Keyflow types your text with fully human timing and rhythm.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-head">
+      <h2>Simple pricing, no gotchas.</h2>
+      <p>Free gets you started. Pay yearly and save a third. Your key arrives within seconds of payment.</p>
+    </div>
+    <div class="pricing-cards">
+      <div class="pcard">
+        <div class="pcard-tier">Free</div>
+        <div class="pcard-price"><span class="pcard-dollar">$</span><span class="pcard-amt">0</span></div>
+        <div class="pcard-billed">forever free</div>
+        <div class="pcard-divider"></div>
+        <div class="pf on"><span class="ck">&#10003;</span> 2 runs per week</div>
+        <div class="pf on"><span class="ck">&#10003;</span> WPM 15 to 100</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Mistake simulation</div>
+        <div class="pf"><span class="xx">&#8212;</span> Drift patterns</div>
+        <div class="pf"><span class="xx">&#8212;</span> Smart pausing</div>
+        <div class="pf"><span class="xx">&#8212;</span> Full WPM range</div>
+        <button class="pcard-btn outline" onclick="window.location='/'">Download Free</button>
+      </div>
+      <div class="pcard featured">
+        <div class="pcard-badge">Most Popular</div>
+        <div class="pcard-tier">Personal</div>
+        <div class="pcard-price"><span class="pcard-dollar">$</span><span class="pcard-amt">4.99</span><span class="pcard-per">/mo</span></div>
+        <div class="pcard-billed">&nbsp;</div>
+        <div class="pcard-divider"></div>
+        <div class="pf on"><span class="ck">&#10003;</span> Unlimited runs</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Full WPM 15 to 300</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Mistake simulation</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Drift patterns</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Smart pausing</div>
+        <div class="pf on"><span class="ck">&#10003;</span> 1 device license</div>
+        <button class="pcard-btn fill" onclick="window.location='https://buy.stripe.com/7sYeVd3qM1Ul5MC1EB7ss0z'">Get Personal</button>
+      </div>
+      <div class="pcard">
+        <div class="pcard-tier">Pro</div>
+        <div class="pcard-price"><span class="pcard-dollar">$</span><span class="pcard-amt">8.99</span><span class="pcard-per">/mo</span></div>
+        <div class="pcard-billed">&nbsp;</div>
+        <div class="pcard-divider"></div>
+        <div class="pf on"><span class="ck">&#10003;</span> Everything in Personal</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Unlimited text profiles</div>
+        <div class="pf on"><span class="ck">&#10003;</span> 2 active devices</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Advanced rhythm engine</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Priority support</div>
+        <div class="pf on"><span class="ck">&#10003;</span> Early feature access</div>
+        <button class="pcard-btn outline" onclick="window.location='https://buy.stripe.com/6oUeVd3qMgPf3Eu6YV7ss0B'">Get Pro</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+          Keyflow
+        </div>
+        <p>The Chrome extension that types for you with natural speed, realistic mistakes, and rhythm that looks genuinely human.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it works</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="/install.html">Install guide</a>
+          <a href="/activate-license.html">Activate license</a>
+          <a href="/contact.html">Contact us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/terms.html">Terms of service</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="/refund.html">Refund policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="/signin.html">Sign in</a>
+          <a href="/get-started.html">Get started</a>
+          <a href="/manage-license.html">Manage license</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Keyflow. All rights reserved.</p>
+      <p>Payments secured by Stripe</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Features | Keyflow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="All Keyflow features explained: custom WPM, human rhythm engine, mistake simulation, drift patterns, and smart pausing.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://keyflow.live/features.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Features | Keyflow">
+  <meta property="og:description" content="All Keyflow features explained: custom WPM, human rhythm engine, mistake simulation, drift patterns, and smart pausing.">
+  <meta property="og:url"         content="https://keyflow.live/features.html">
+  <meta property="og:image"       content="https://keyflow.live/og.png">
+  <meta property="og:site_name"   content="Keyflow">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Features | Keyflow">
+  <meta name="twitter:description" content="All Keyflow features explained: custom WPM, human rhythm engine, mistake simulation, drift patterns, and smart pausing.">
+  <meta name="twitter:image"       content="https://keyflow.live/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#2563eb;--blue-hover:#1d4ed8;--blue-dim:rgba(37,99,235,0.08);
+      --blue-light:#eff6ff;--blue-glow:rgba(37,99,235,0.22);
+      --text:#111;--muted:#64748b;--faint:#94a3b8;
+      --border:rgba(0,0,0,0.1);--border-dark:rgba(0,0,0,0.16);
+      --gray-bg:#f7f7f7;--green:#16a34a;--green-bg:#dcfce7;
+      --shadow-sm:0 1px 2px rgba(0,0,0,0.08),inset 0 -0.5px 0 rgba(0,0,0,0.1);
+      --shadow-card:0 2px 4px rgba(10,10,10,0.04),0 8px 16px -4px rgba(10,10,10,0.06),0 0 0 0.5px rgba(10,10,10,0.1);
+    }
+    body{font-family:'Inter',-apple-system,sans-serif;font-size:15px;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+    .nav-inner{width:100%;max-width:1100px;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.3px}
+    .nav-logo img{border-radius:7px;display:block;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+    .nav-links a{padding:6px 12px;font-size:14px;font-weight:500;color:var(--muted);border-radius:8px;transition:color 0.18s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-right{display:flex;align-items:center;gap:8px}
+    .btn-ghost{padding:8px 12px;font-size:14px;font-weight:500;color:var(--muted);border-radius:8px;transition:color 0.18s;display:inline-block}
+    .btn-ghost:hover{color:var(--text)}
+    .btn-solid{padding:9px 16px;font-size:14px;font-weight:600;color:var(--text);background:#fff;border-radius:8px;border:0.5px solid var(--border-dark);box-shadow:var(--shadow-sm);transition:all 0.15s;display:inline-block}
+    .btn-solid:hover{background:var(--gray-bg)}
+    @media(max-width:700px){.nav-links{display:none}.nav-inner{padding:0 20px}}
+    /* FOOTER */
+    footer{padding:48px 40px 28px;border-top:1px solid var(--border);background:#fff}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-top{display:flex;gap:40px;margin-bottom:40px}
+    .footer-brand{flex:0 0 240px}
+    .footer-brand-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin-bottom:12px}
+    .footer-brand-logo img{border-radius:6px;display:block}
+    .footer-brand p{font-size:13.5px;color:var(--muted);line-height:1.65}
+    .footer-cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .footer-col h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:12px}
+    .footer-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px;transition:color 0.18s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid var(--border)}
+    .footer-bottom p{font-size:12.5px;color:var(--faint)}
+    @media(max-width:900px){.footer-top{flex-direction:column}.footer-cols{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-cols{grid-template-columns:1fr}}
+    /* HERO */
+    .page-hero{background:linear-gradient(180deg,#2563eb 0%,#4e80ee 16%,#6d97f1 27%,#9bb7f5 42%,#ccd9fa 64%,#e8effe 80%,#fff 100%);padding:88px 40px 96px;text-align:center}
+    .page-hero-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+    .page-label{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.85);background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:5px 14px;border-radius:100px;margin-bottom:22px;letter-spacing:0.2px}
+    .page-hero h1{font-size:52px;font-weight:600;color:#fff;letter-spacing:-0.04em;line-height:1.1;margin-bottom:18px}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,0.72);line-height:1.65;max-width:480px;margin:0 auto}
+    /* FEAT GRID */
+    .feat-section{padding:72px 40px;max-width:1100px;margin:0 auto}
+    .feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .feat-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px;box-shadow:0 1px 3px rgba(0,0,0,0.04);transition:transform 0.2s,box-shadow 0.2s}
+    .feat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-card)}
+    .feat-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    .feat-icon{width:40px;height:40px;background:var(--blue-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0}
+    .feat-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;background:var(--gray-bg);color:var(--muted)}
+    .feat-card h3{font-size:16px;font-weight:700;letter-spacing:-0.03em;margin-bottom:8px}
+    .feat-card p{font-size:14px;color:var(--muted);line-height:1.7}
+    /* CTA */
+    .cta-band{background:var(--gray-bg);padding:64px 40px;text-align:center}
+    .cta-band h2{font-size:32px;font-weight:700;letter-spacing:-0.04em;margin-bottom:12px}
+    .cta-band p{font-size:16px;color:var(--muted);margin-bottom:28px}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:15px;font-weight:600;color:#fff;background:var(--blue);border-radius:10px;border:1px solid rgba(0,0,0,0.1);box-shadow:var(--shadow-sm);transition:all 0.15s}
+    .btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 4px 18px var(--blue-glow)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;font-size:15px;font-weight:500;color:var(--text);background:#fff;border-radius:10px;border:0.5px solid var(--border-dark);box-shadow:var(--shadow-sm);transition:all 0.15s;margin-left:10px}
+    .btn-secondary:hover{background:var(--gray-bg)}
+    @media(max-width:700px){.feat-grid{grid-template-columns:1fr}.page-hero h1{font-size:36px}.feat-section{padding:48px 20px}.page-hero{padding:56px 20px 64px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Keyflow",
+            "item": "https://keyflow.live"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Features",
+            "item": "https://keyflow.live/features.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Features",
+        "description": "All Keyflow features explained",
+        "url": "https://keyflow.live/features.html",
+        "isPartOf": {"@id": "https://keyflow.live/#website"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+      Keyflow
+    </a>
+    <ul class="nav-links">
+      <li><a href="/features.html" class="active">Features</a></li>
+      <li><a href="/how-it-works.html">How it works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/signin.html" class="btn-ghost">Sign in</a>
+      <a href="/get-started.html" class="btn-solid">Start free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Every feature, explained</div>
+    <h1>Built for typing that actually looks human.</h1>
+    <p>Keyflow is not an autoclicker. It is a full typing simulation engine with variable timing, natural errors, and rhythm patterns modelled on real human behaviour.</p>
+  </div>
+</div>
+
+<div class="feat-section">
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
+        <span class="feat-badge">15 to 300</span>
+      </div>
+      <h3>Custom WPM</h3>
+      <p>Set your exact typing speed anywhere in the 15 to 300 WPM range. Fixed rate or natural drift, your call.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <span class="feat-badge">Varies every key</span>
+      </div>
+      <h3>Human rhythm engine</h3>
+      <p>No two keystrokes hit at the same interval. Keyflow adds micro-jitter between every character, slows on harder words, and speeds through familiar ones.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 12h1m16 0h1M12 3v1m0 16v1m-7-14.3.7.7m12.6 12.6.7.7M4.7 19.3l.7-.7m12.6-12.6.7-.7M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg></div>
+        <span class="feat-badge">Configurable</span>
+      </div>
+      <h3>Mistake simulation</h3>
+      <p>Types a wrong character, pauses for 80 to 200 ms, backspaces, and corrects itself. Rate is adjustable from 1 to 12 percent.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <span class="feat-badge">Always on</span>
+      </div>
+      <h3>Typing drift</h3>
+      <p>Subtle speed variation accumulates across a run. Long paragraphs slow slightly, short sentences fly. Looks exactly like a tired human at 11pm.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></div>
+        <span class="feat-badge">Punctuation-aware</span>
+      </div>
+      <h3>Smart pausing</h3>
+      <p>Slows at commas, stops longer at periods and question marks, hesitates before long words. The typing engine reads the structure of your text.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2"/></svg></div>
+        <span class="feat-badge">Configurable delay</span>
+      </div>
+      <h3>Paragraph breaks</h3>
+      <p>Adds a longer natural pause between paragraphs to simulate re-reading and thinking before continuing.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></div>
+        <span class="feat-badge">Pro feature</span>
+      </div>
+      <h3>Session chunks</h3>
+      <p>Splits your text into multiple fake editing sessions with longer gaps between them, mimicking real writing behaviour over time.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 3l7 7-4 1 3 6-2 1-3-6-4 3z"/></svg></div>
+        <span class="feat-badge">Pro feature</span>
+      </div>
+      <h3>Cursor drift</h3>
+      <p>Occasionally selects a few words back, pauses, then retypes. Looks like the kind of editing a real writer does mid-sentence.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zM12 6v6l4 2"/></svg></div>
+        <span class="feat-badge">Up to 10 seconds</span>
+      </div>
+      <h3>Start delay</h3>
+      <p>Gives you time to click into your target field before typing starts. Choose 2, 3, 5, or 10 seconds.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card-top">
+        <div class="feat-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+        <span class="feat-badge">Any Chrome input</span>
+      </div>
+      <h3>Platform support</h3>
+      <p>If it is a text box inside Chrome, Keyflow works in it. Google Docs, Notion, Gmail, Canvas, Turnitin, Word Online, all of them.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Try it free right now.</h2>
+  <p>Free tier gives you 2 runs per week with no account needed. Upgrade when you are ready.</p>
+  <a href="/" class="btn-primary"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download Free</a>
+  <a href="/#pricing" class="btn-secondary">See pricing</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+          Keyflow
+        </div>
+        <p>The Chrome extension that types for you with natural speed, realistic mistakes, and rhythm that looks genuinely human.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it works</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="/install.html">Install guide</a>
+          <a href="/activate-license.html">Activate license</a>
+          <a href="/contact.html">Contact us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/terms.html">Terms of service</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="/refund.html">Refund policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="/signin.html">Sign in</a>
+          <a href="/get-started.html">Get started</a>
+          <a href="/manage-license.html">Manage license</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Keyflow. All rights reserved.</p>
+      <p>Payments secured by Stripe</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

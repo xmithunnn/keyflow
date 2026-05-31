@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Install Guide | Keyflow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Step-by-step guide to install the Keyflow Chrome extension. Download, run the install script, load unpacked. Done in under a minute.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://keyflow.live/install.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Install Guide | Keyflow">
+  <meta property="og:description" content="Step-by-step guide to install the Keyflow Chrome extension. Download, run the install script, load unpacked. Done in under a minute.">
+  <meta property="og:url"         content="https://keyflow.live/install.html">
+  <meta property="og:image"       content="https://keyflow.live/og.png">
+  <meta property="og:site_name"   content="Keyflow">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Install Guide | Keyflow">
+  <meta name="twitter:description" content="Step-by-step guide to install the Keyflow Chrome extension. Download, run the install script, load unpacked. Done in under a minute.">
+  <meta name="twitter:image"       content="https://keyflow.live/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#2563eb;--blue-hover:#1d4ed8;--blue-dim:rgba(37,99,235,0.08);
+      --blue-light:#eff6ff;--blue-glow:rgba(37,99,235,0.22);
+      --text:#111;--muted:#64748b;--faint:#94a3b8;
+      --border:rgba(0,0,0,0.1);--border-dark:rgba(0,0,0,0.16);
+      --gray-bg:#f7f7f7;--green:#16a34a;--green-bg:#dcfce7;
+      --shadow-sm:0 1px 2px rgba(0,0,0,0.08),inset 0 -0.5px 0 rgba(0,0,0,0.1);
+      --shadow-card:0 2px 4px rgba(10,10,10,0.04),0 8px 16px -4px rgba(10,10,10,0.06),0 0 0 0.5px rgba(10,10,10,0.1);
+    }
+    body{font-family:'Inter',-apple-system,sans-serif;font-size:15px;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;padding:0 32px;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text)}
+    .nav-logo img{border-radius:6px;display:block;flex-shrink:0}
+    .nav-back{font-size:13px;font-weight:500;color:var(--blue)}
+    .nav-back:hover{text-decoration:underline}
+    /* FOOTER */
+    footer{padding:48px 40px 28px;border-top:1px solid var(--border);background:#fff}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-top{display:flex;gap:40px;margin-bottom:40px}
+    .footer-brand{flex:0 0 240px}
+    .footer-brand-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin-bottom:12px}
+    .footer-brand-logo img{border-radius:6px;display:block}
+    .footer-brand p{font-size:13.5px;color:var(--muted);line-height:1.65}
+    .footer-cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .footer-col h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:12px}
+    .footer-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px;transition:color 0.18s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid var(--border)}
+    .footer-bottom p{font-size:12.5px;color:var(--faint)}
+    @media(max-width:900px){.footer-top{flex-direction:column}.footer-cols{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-cols{grid-template-columns:1fr}}
+    .wrap{max-width:680px;margin:0 auto;padding:52px 24px 80px}
+    .pg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--blue);margin-bottom:10px}
+    h1{font-size:32px;font-weight:700;letter-spacing:-0.04em;line-height:1.2;margin-bottom:6px}
+    .pg-sub{font-size:15px;color:var(--muted);line-height:1.65;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+    .step-row{display:flex;gap:20px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+    .step-row:last-of-type{border-bottom:none}
+    .sn{flex-shrink:0;width:36px;height:36px;border-radius:10px;background:var(--blue);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+    .step-row h3{font-size:17px;font-weight:700;letter-spacing:-0.03em;margin-bottom:8px}
+    .step-row p{font-size:14.5px;color:var(--muted);line-height:1.75}
+    .step-row p+p{margin-top:8px}
+    code{background:var(--gray-bg);border:1px solid var(--border);border-radius:5px;padding:1px 6px;font-size:13px;font-family:'SF Mono','Fira Code',monospace;color:var(--text)}
+    .callout{border-left:3px solid var(--blue);background:#eff6ff;border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0;font-size:14px;color:#1e40af;line-height:1.65}
+    .callout-warn{border-left-color:#f97316;background:#fff7ed;color:#9a3412}
+    .section-h{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--faint);margin:40px 0 20px}
+    .trouble-item{padding:14px 0;border-bottom:1px solid var(--border)}
+    .trouble-item:last-child{border-bottom:none}
+    .trouble-q{font-size:14.5px;font-weight:600;margin-bottom:6px}
+    .trouble-a{font-size:14px;color:var(--muted);line-height:1.7}
+    .dl-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;font-size:15px;font-weight:600;color:#fff;background:var(--blue);border-radius:10px;border:1px solid rgba(0,0,0,0.1);box-shadow:var(--shadow-sm);transition:all 0.15s;margin-bottom:32px}
+    .dl-btn:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 4px 18px var(--blue-glow)}
+    footer{padding:18px 32px;font-size:12px;color:var(--faint);text-align:center;border-top:1px solid var(--border)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Keyflow",
+            "item": "https://keyflow.live"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Install Guide",
+            "item": "https://keyflow.live/install.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Install Guide",
+        "description": "Step-by-step Chrome extension setup",
+        "url": "https://keyflow.live/install.html",
+        "isPartOf": {"@id": "https://keyflow.live/#website"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+    Keyflow
+  </a>
+  <a href="/" class="nav-back">&larr; Back to home</a>
+</nav>
+
+<div class="wrap">
+  <div class="pg-label">Setup</div>
+  <h1>Install Keyflow in Chrome</h1>
+  <p class="pg-sub">Takes under a minute. Follow the steps below and run the install script so the extension stays working even after you clean up your downloads.</p>
+
+  <a href="/" class="dl-btn"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download keyflow-extension.zip</a>
+
+  <div class="step-row">
+    <div class="sn">1</div>
+    <div>
+      <h3>Download and unzip</h3>
+      <p>Click the button above. Find <code>keyflow-extension.zip</code> in your Downloads folder and unzip it. You will see a folder with an <code>extension</code> subfolder plus two install scripts.</p>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="sn">2</div>
+    <div>
+      <h3>Run the install script (important)</h3>
+      <p>This step copies the extension to a permanent location so Chrome does not lose it when you delete the zip.</p>
+      <p><strong>Mac:</strong> Open Terminal, drag <code>INSTALL-MAC.sh</code> into it, press Enter.<br>
+         <strong>Windows:</strong> Double-click <code>INSTALL-WINDOWS.bat</code> and click Run anyway if prompted.</p>
+      <div class="callout callout-warn">If you skip this step and load the extension directly from your Downloads folder, deleting or moving the zip will break the extension in Chrome. Always run the script first.</div>
+      <p>The script copies the extension to:<br>
+         Mac: <code>~/Library/Application Support/Keyflow/extension</code><br>
+         Windows: <code>%APPDATA%\Keyflow\extension</code></p>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="sn">3</div>
+    <div>
+      <h3>Open Chrome extensions</h3>
+      <p>In Chrome, go to <code>chrome://extensions</code> in the address bar, or open the menu (three dots) and choose Extensions.</p>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="sn">4</div>
+    <div>
+      <h3>Enable Developer Mode</h3>
+      <p>In the top right corner of the extensions page, toggle on <strong>Developer mode</strong>. Three new buttons will appear at the top left.</p>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="sn">5</div>
+    <div>
+      <h3>Load the extension</h3>
+      <p>Click <strong>Load unpacked</strong>. Navigate to the permanent folder the install script created (not your Downloads folder). Select the <code>extension</code> folder inside it. Click Select.</p>
+      <div class="callout">You should see the Keyflow card appear in your extensions list. Pin it to your toolbar by clicking the puzzle icon and pinning Keyflow.</div>
+    </div>
+  </div>
+
+  <div class="step-row">
+    <div class="sn">6</div>
+    <div>
+      <h3>You are done</h3>
+      <p>Click the Keyflow icon in your toolbar. The popup opens. Paste text, set your WPM, click Start Typing. If you have a paid license, tap Upgrade to Pro and enter your key to unlock unlimited runs.</p>
+    </div>
+  </div>
+
+  <div class="section-h">Troubleshooting</div>
+
+  <div class="trouble-item">
+    <div class="trouble-q">The extension disappeared after I deleted the zip.</div>
+    <div class="trouble-a">You loaded it from your Downloads folder. Re-download, run the install script, then reload unpacked from the new permanent path.</div>
+  </div>
+  <div class="trouble-item">
+    <div class="trouble-q">Chrome says the extension is corrupted or disabled.</div>
+    <div class="trouble-a">Re-download the latest zip from <a href="/" style="color:var(--blue)">keyflow.live</a>, run the install script, and load unpacked again. Remove the old entry from chrome://extensions first.</div>
+  </div>
+  <div class="trouble-item">
+    <div class="trouble-q">Keyflow is not typing in Google Docs.</div>
+    <div class="trouble-a">Click directly into a paragraph in the doc before pressing Start. Make sure the Keyflow popup is still open when you click into the doc. Do not close the popup before the run starts.</div>
+  </div>
+  <div class="trouble-item">
+    <div class="trouble-q">I got an error on INSTALL-MAC.sh: permission denied.</div>
+    <div class="trouble-a">Run <code>chmod +x INSTALL-MAC.sh</code> in Terminal first, then run the script again.</div>
+  </div>
+  <div class="trouble-item">
+    <div class="trouble-q">Still stuck?</div>
+    <div class="trouble-a">Email <a href="mailto:hello@keyflow.live" style="color:var(--blue)">hello@keyflow.live</a> and describe what step you are on. We usually reply within a few hours.</div>
+  </div>
+</div>
+
+<footer>2025 Keyflow. All rights reserved. - <a href="/privacy.html" style="color:var(--blue)">Privacy</a> - <a href="/terms.html" style="color:var(--blue)">Terms</a></footer>
+</body>
+</html>

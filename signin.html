@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- @@KEYFLOW_SEO_BLOCK@@ -->
+  <meta charset="utf-8">
+  <title>Account and License | Keyflow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Activate your Keyflow license key, view your plan details, and manage your subscription.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://keyflow.live/signin.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Account and License | Keyflow">
+  <meta property="og:description" content="Activate your Keyflow license key, view your plan details, and manage your subscription.">
+  <meta property="og:url"         content="https://keyflow.live/signin.html">
+  <meta property="og:image"       content="https://keyflow.live/og.png">
+  <meta property="og:site_name"   content="Keyflow">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Account and License | Keyflow">
+  <meta name="twitter:description" content="Activate your Keyflow license key, view your plan details, and manage your subscription.">
+  <meta name="twitter:image"       content="https://keyflow.live/og.png">
+  <!-- Favicon -->
+  <!-- Open Graph -->
+  <!-- Twitter / X -->
+  <!-- Favicon -->
+  <!-- Open Graph -->
+  <!-- Twitter / X -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#2563eb;--blue-hover:#1d4ed8;--blue-soft:rgba(37,99,235,0.08);
+      --green:#16a34a;--green-bg:#dcfce7;--red:#ef4444;--red-bg:#fef2f2;
+      --text:#111;--muted:#64748b;--faint:#94a3b8;
+      --border:rgba(0,0,0,0.1);--border-dark:rgba(0,0,0,0.16);
+      --gray-bg:#f7f7f7;--shadow-sm:0 1px 2px rgba(0,0,0,0.08),inset 0 -0.5px 0 rgba(0,0,0,0.1);
+    }
+    body{font-family:'Inter',-apple-system,sans-serif;font-size:15px;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;padding:0 32px;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;letter-spacing:-0.3px;color:var(--text)}
+    .nav-logo img{border-radius:6px;display:block}
+    .nav-back{font-size:13px;font-weight:500;color:var(--blue)}
+    .nav-back:hover{text-decoration:underline}
+
+    /* HERO */
+    .account-hero{background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 50%,#4f80ee 100%);padding:52px 32px;text-align:center;position:relative;overflow:hidden}
+    .account-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+    .account-hero-inner{position:relative;z-index:1;max-width:520px;margin:0 auto}
+    .hero-icon{width:56px;height:56px;border-radius:16px;margin:0 auto 16px;display:block;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+    .account-hero h1{font-size:28px;font-weight:700;color:#fff;letter-spacing:-0.04em;margin-bottom:8px}
+    .account-hero p{font-size:15px;color:rgba(255,255,255,0.68);line-height:1.6}
+
+    /* WRAP */
+    .wrap{max-width:560px;margin:0 auto;padding:40px 24px 80px}
+
+    /* CARDS */
+    .card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+    .card-header{padding:20px 24px 16px;border-bottom:1px solid var(--border)}
+    .card-header h2{font-size:15px;font-weight:700;letter-spacing:-0.03em;margin-bottom:3px}
+    .card-header p{font-size:13px;color:var(--muted)}
+    .card-body{padding:20px 24px}
+
+    /* STATUS BANNER */
+    .status-banner{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:10px;margin-bottom:20px}
+    .status-banner.pro{background:linear-gradient(135deg,rgba(37,99,235,0.06),rgba(37,99,235,0.02));border:1px solid rgba(37,99,235,0.18)}
+    .status-banner.free{background:var(--gray-bg);border:1px solid var(--border)}
+    .status-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .status-icon.pro-icon{background:var(--blue);color:#fff}
+    .status-icon.free-icon{background:var(--gray-bg);border:1px solid var(--border);color:var(--muted)}
+    .status-details{flex:1}
+    .status-title{font-size:14px;font-weight:700;letter-spacing:-0.02em}
+    .status-sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .status-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px}
+    .badge-pro{background:var(--blue-soft);color:var(--blue)}
+    .badge-free{background:var(--gray-bg);color:var(--muted)}
+
+    /* KEY DISPLAY */
+    .key-display{background:#f8fafc;border:1.5px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .key-text{font-family:'SF Mono','Fira Code','Courier New',monospace;font-size:13.5px;letter-spacing:0.8px;color:var(--blue);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .key-copy-btn{background:none;border:1px solid var(--border-dark);border-radius:7px;padding:6px 12px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;transition:all 0.15s;flex-shrink:0;margin-left:12px}
+    .key-copy-btn:hover{background:var(--gray-bg);color:var(--text)}
+    .key-copy-btn.copied{color:var(--green);border-color:rgba(22,163,74,0.3);background:var(--green-bg)}
+
+    /* FORM */
+    .field{margin-bottom:16px}
+    label.field-lbl{display:block;font-size:11.5px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:7px}
+    input.field-input{width:100%;border:1.5px solid var(--border-dark);border-radius:9px;padding:11px 14px;font-size:14px;font-family:inherit;color:var(--text);outline:none;background:#fff;transition:border-color 0.15s,box-shadow 0.15s;letter-spacing:0.3px}
+    input.field-input::placeholder{color:var(--faint);letter-spacing:0}
+    input.field-input:focus{border-color:rgba(37,99,235,0.45);box-shadow:0 0 0 3px rgba(37,99,235,0.08)}
+    input.field-input.err{border-color:rgba(239,68,68,0.5)}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border-radius:10px;border:none;font-size:14.5px;font-weight:600;font-family:inherit;color:#fff;background:var(--blue);cursor:pointer;transition:all 0.15s;letter-spacing:-0.2px}
+    .btn-primary:hover:not(:disabled){background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 4px 18px rgba(37,99,235,0.28)}
+    .btn-primary:disabled{opacity:0.45;cursor:not-allowed}
+    .btn-secondary{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px;border-radius:10px;border:1.5px solid var(--border-dark);font-size:14px;font-weight:500;font-family:inherit;color:var(--text);background:#fff;cursor:pointer;transition:all 0.15s;margin-top:10px}
+    .btn-secondary:hover{background:var(--gray-bg)}
+    .btn-danger{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:12px;border-radius:10px;border:1.5px solid rgba(239,68,68,0.3);font-size:14px;font-weight:500;font-family:inherit;color:var(--red);background:#fff;cursor:pointer;transition:all 0.15s;margin-top:10px}
+    .btn-danger:hover{background:var(--red-bg)}
+
+    /* ALERT */
+    .alert{padding:12px 16px;border-radius:9px;font-size:13.5px;line-height:1.5;margin-bottom:16px;display:none}
+    .alert.show{display:block}
+    .alert.success{background:var(--green-bg);color:#14532d;border:1px solid rgba(22,163,74,0.2)}
+    .alert.error{background:var(--red-bg);color:#7f1d1d;border:1px solid rgba(239,68,68,0.2)}
+    .alert.info{background:rgba(37,99,235,0.06);color:#1e40af;border:1px solid rgba(37,99,235,0.15)}
+
+    /* PERKS LIST */
+    .perks{margin:16px 0 0}
+    .perk{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13.5px;color:var(--text)}
+    .perk:last-child{border-bottom:none}
+    .perk-icon{color:var(--green);flex-shrink:0}
+    .perk-icon.off{color:var(--faint)}
+
+    /* MANAGE ROW */
+    .manage-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border)}
+    .manage-row:last-child{border-bottom:none;padding-bottom:0}
+    .mr-label{font-size:14px;font-weight:500}
+    .mr-sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .mr-action{font-size:13px;font-weight:600;color:var(--blue);cursor:pointer;background:none;border:none;font-family:inherit;padding:6px 0}
+    .mr-action:hover{text-decoration:underline}
+
+    /* SECTION DIVIDER */
+    .section-divider{display:flex;align-items:center;gap:12px;margin:28px 0 20px}
+    .section-divider span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--faint);white-space:nowrap}
+    .divider-line{flex:1;height:1px;background:var(--border)}
+
+    /* TABS */
+    .tabs{display:flex;background:var(--gray-bg);border-radius:10px;padding:3px;margin-bottom:24px}
+    .tab{flex:1;padding:8px 12px;border-radius:8px;font-size:13.5px;font-weight:500;color:var(--muted);cursor:pointer;border:none;background:none;font-family:inherit;transition:all 0.15s;text-align:center}
+    .tab.active{background:#fff;color:var(--text);font-weight:600;box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);padding:20px 32px;font-size:12px;color:var(--faint);display:flex;justify-content:space-between;align-items:center}
+    footer a{color:var(--blue)}
+    footer a:hover{text-decoration:underline}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Keyflow",
+            "item": "https://keyflow.live"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Account",
+            "item": "https://keyflow.live/signin.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Account",
+        "description": "Activate and manage your Keyflow license",
+        "url": "https://keyflow.live/signin.html",
+        "isPartOf": {"@id": "https://keyflow.live/#website"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+    Keyflow
+  </a>
+  <a href="/" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="account-hero">
+  <div class="account-hero-inner">
+    <img class="hero-icon" src="/favicon.png" alt="Keyflow">
+    <h1>Your Account</h1>
+    <p>Activate your license, view your plan, and manage your subscription.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('activate')">Activate License</button>
+    <button class="tab" onclick="switchTab('manage')">Manage Subscription</button>
+  </div>
+
+  <!-- ═══ TAB: ACTIVATE ═══ -->
+  <div class="tab-panel active" id="panel-activate">
+
+    <!-- Status banner -->
+    <div class="status-banner free" id="status-banner">
+      <div class="status-icon free-icon" id="status-icon">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/>
+        </svg>
+      </div>
+      <div class="status-details">
+        <div class="status-title" id="status-title">No active license</div>
+        <div class="status-sub" id="status-sub">You are on the free plan - 2 runs per week</div>
+      </div>
+      <div class="status-badge badge-free" id="status-badge">FREE</div>
+    </div>
+
+    <!-- Active key display (hidden by default) -->
+    <div id="key-section" style="display:none;margin-bottom:20px">
+      <div style="font-size:11.5px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px">Your License Key</div>
+      <div class="key-display">
+        <div class="key-text" id="key-display-text">KF-XXXXX-XXXXX-XXXXX-XXXXX</div>
+        <button class="key-copy-btn" id="copy-btn" onclick="copyKey()">Copy</button>
+      </div>
+      <div id="key-meta" style="font-size:12px;color:var(--muted)"></div>
+    </div>
+
+    <div class="alert" id="alert-box"></div>
+
+    <div class="card" id="activate-card">
+      <div class="card-header">
+        <h2>Activate your license key</h2>
+        <p>Enter the key from your purchase confirmation email.</p>
+      </div>
+      <div class="card-body">
+        <div class="field">
+          <label class="field-lbl">License Key</label>
+          <input class="field-input" id="key-input" type="text" placeholder="KF-XXXXX-XXXXX-XXXXX-XXXXX" autocomplete="off" spellcheck="false">
+        </div>
+        <button class="btn-primary" id="activate-btn" onclick="activateLicense()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Activate License
+        </button>
+        <button class="btn-secondary" onclick="window.location.href='#pricing-info'">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Don't have a key? View pricing
+        </button>
+      </div>
+    </div>
+
+    <!-- What you get -->
+    <div class="card" id="pricing-info">
+      <div class="card-header">
+        <h2>Plan comparison</h2>
+        <p>All paid plans include unlimited runs and the full feature set.</p>
+      </div>
+      <div class="card-body">
+        <div class="perks">
+          <div class="perk"><span class="perk-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Unlimited typing sessions per week</div>
+          <div class="perk"><span class="perk-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Full WPM range (15 to 300)</div>
+          <div class="perk"><span class="perk-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Drift patterns and advanced rhythm</div>
+          <div class="perk"><span class="perk-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Smart pausing at punctuation</div>
+          <div class="perk"><span class="perk-icon off"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> <span style="color:var(--muted)">Pro only: text profiles &amp; 2 devices</span></div>
+        </div>
+        <a href="/#pricing" style="display:block;margin-top:18px" class="btn-primary">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          See pricing and upgrade
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ TAB: MANAGE ═══ -->
+  <div class="tab-panel" id="panel-manage">
+
+    <div class="card">
+      <div class="card-header">
+        <h2>Subscription management</h2>
+        <p>Cancel, update billing, or view your invoices via the Stripe portal.</p>
+      </div>
+      <div class="card-body">
+        <div class="manage-row">
+          <div>
+            <div class="mr-label">Billing portal</div>
+            <div class="mr-sub">Update payment method, download invoices, cancel plan</div>
+          </div>
+          <button class="mr-action" onclick="window.open('https://billing.stripe.com/p/login/keyflow','_blank')">Open →</button>
+        </div>
+        <div class="manage-row">
+          <div>
+            <div class="mr-label">Email support</div>
+            <div class="mr-sub">Missing key, billing issue, or technical help</div>
+          </div>
+          <button class="mr-action" onclick="window.location.href='mailto:hello@keyflow.live'">Contact →</button>
+        </div>
+        <div class="manage-row">
+          <div>
+            <div class="mr-label">Deactivate license</div>
+            <div class="mr-sub">Remove license from this browser (key stays valid)</div>
+          </div>
+          <button class="mr-action" style="color:var(--red)" onclick="deactivateLicense()">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>Install guide</h2>
+        <p>Step-by-step setup for the Chrome extension.</p>
+      </div>
+      <div class="card-body" style="padding-bottom:8px">
+        <div class="manage-row">
+          <div><div class="mr-label">1. Download</div><div class="mr-sub">Click "Download Free" on the homepage</div></div>
+        </div>
+        <div class="manage-row">
+          <div><div class="mr-label">2. Unzip &amp; move</div><div class="mr-sub">Extract the zip. Run the INSTALL script to save to a permanent folder - do not load directly from Downloads</div></div>
+        </div>
+        <div class="manage-row">
+          <div><div class="mr-label">3. Load in Chrome</div><div class="mr-sub">Go to chrome://extensions → Enable Developer Mode → Load Unpacked → select the extension folder</div></div>
+        </div>
+        <div class="manage-row">
+          <div><div class="mr-label">4. Activate</div><div class="mr-sub">Click the Keyflow icon in Chrome, tap "Upgrade to Pro", enter your key</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Keyflow. All rights reserved.</span>
+  <span>
+    <a href="/terms.html">Terms</a> · 
+    <a href="/privacy.html">Privacy</a> · 
+    <a href="mailto:hello@keyflow.live">Support</a>
+  </span>
+</footer>
+
+<script>
+const API_URL = 'https://api.keyflow.app';
+
+// ── TABS ──────────────────────────────────────
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.classList.toggle('active', (i === 0 && tab === 'activate') || (i === 1 && tab === 'manage'));
+  });
+  document.getElementById('panel-activate').classList.toggle('active', tab === 'activate');
+  document.getElementById('panel-manage').classList.toggle('active', tab === 'manage');
+}
+
+// ── LOCAL STORAGE KEY ─────────────────────────
+const KF_KEY = 'kf_web_license';
+
+function showAlert(msg, type) {
+  const box = document.getElementById('alert-box');
+  box.textContent = msg;
+  box.className = 'alert show ' + type;
+  setTimeout(() => box.classList.remove('show'), 5000);
+}
+
+function setStatusPro(key, tier) {
+  const banner = document.getElementById('status-banner');
+  const icon   = document.getElementById('status-icon');
+  const title  = document.getElementById('status-title');
+  const sub    = document.getElementById('status-sub');
+  const badge  = document.getElementById('status-badge');
+  banner.className = 'status-banner pro';
+  icon.className   = 'status-icon pro-icon';
+  icon.innerHTML   = '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+  title.textContent = (tier === 'pro' ? 'Pro' : 'Personal') + ' plan active';
+  sub.textContent   = tier === 'pro' ? '2 devices · Unlimited runs · All features' : '1 device · Unlimited runs · All features';
+  badge.textContent = tier === 'pro' ? 'PRO' : 'PERSONAL';
+  badge.className   = 'status-badge badge-pro';
+  document.getElementById('key-section').style.display = 'block';
+  document.getElementById('key-display-text').textContent = key;
+}
+
+function setStatusFree() {
+  document.getElementById('status-banner').className = 'status-banner free';
+  document.getElementById('status-icon').className   = 'status-icon free-icon';
+  document.getElementById('status-icon').innerHTML   = '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>';
+  document.getElementById('status-title').textContent = 'No active license';
+  document.getElementById('status-sub').textContent   = 'You are on the free plan - 2 runs per week';
+  document.getElementById('status-badge').textContent = 'FREE';
+  document.getElementById('status-badge').className   = 'status-badge badge-free';
+  document.getElementById('key-section').style.display = 'none';
+}
+
+// ── ACTIVATE ──────────────────────────────────
+async function activateLicense() {
+  const key = document.getElementById('key-input').value.trim().toUpperCase();
+  const inp = document.getElementById('key-input');
+  if (!key) { inp.classList.add('err'); showAlert('Please enter your license key.', 'error'); return; }
+  inp.classList.remove('err');
+
+  const btn = document.getElementById('activate-btn');
+  btn.textContent = 'Validating...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(API_URL + '/api/validate', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ key, deviceId: 'web-' + key.slice(-8) }),
+      signal: AbortSignal.timeout(8000)
+    });
+    const data = await res.json();
+    if (data.valid) {
+      localStorage.setItem(KF_KEY, JSON.stringify({ key, tier: data.tier, expires: data.expiresAt, at: Date.now() }));
+      setStatusPro(key, data.tier);
+      showAlert('License activated successfully. Welcome to ' + (data.tier === 'pro' ? 'Pro' : 'Personal') + '!', 'success');
+    } else {
+      showAlert(data.error || 'Invalid key. Check your confirmation email.', 'error');
+    }
+  } catch (e) {
+    showAlert('Could not reach the server. Check your connection.', 'error');
+  }
+
+  btn.textContent = 'Activate License';
+  btn.disabled = false;
+}
+
+// ── DEACTIVATE ────────────────────────────────
+function deactivateLicense() {
+  if (!confirm('Remove the license from this browser? Your key will still be valid.')) return;
+  localStorage.removeItem(KF_KEY);
+  setStatusFree();
+  showAlert('License removed from this browser.', 'info');
+}
+
+// ── COPY KEY ──────────────────────────────────
+function copyKey() {
+  const key = document.getElementById('key-display-text').textContent;
+  navigator.clipboard.writeText(key).then(() => {
+    const btn = document.getElementById('copy-btn');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1800);
+  });
+}
+
+// ── LOAD SAVED STATE ──────────────────────────
+(function init() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(KF_KEY) || 'null');
+    if (saved && saved.key) {
+      if (saved.expires && new Date(saved.expires) < new Date()) {
+        localStorage.removeItem(KF_KEY); return;
+      }
+      setStatusPro(saved.key, saved.tier || 'personal');
+    }
+  } catch (e) {}
+
+  // Enter key triggers activate
+  
+  // ── READ TAB FROM URL PARAM ────────────────────────────────
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+    if (tab === 'manage') switchTab('manage');
+  })();
+
+  document.getElementById('key-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') activateLicense();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How It Works | Keyflow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Learn how Keyflow simulates human typing. Variable timing, mistake correction, and rhythm patterns that look genuinely real.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://keyflow.live/how-it-works.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="How It Works | Keyflow">
+  <meta property="og:description" content="Learn how Keyflow simulates human typing. Variable timing, mistake correction, and rhythm patterns that look genuinely real.">
+  <meta property="og:url"         content="https://keyflow.live/how-it-works.html">
+  <meta property="og:image"       content="https://keyflow.live/og.png">
+  <meta property="og:site_name"   content="Keyflow">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="How It Works | Keyflow">
+  <meta name="twitter:description" content="Learn how Keyflow simulates human typing. Variable timing, mistake correction, and rhythm patterns that look genuinely real.">
+  <meta name="twitter:image"       content="https://keyflow.live/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#2563eb;--blue-hover:#1d4ed8;--blue-dim:rgba(37,99,235,0.08);
+      --blue-light:#eff6ff;--blue-glow:rgba(37,99,235,0.22);
+      --text:#111;--muted:#64748b;--faint:#94a3b8;
+      --border:rgba(0,0,0,0.1);--border-dark:rgba(0,0,0,0.16);
+      --gray-bg:#f7f7f7;--green:#16a34a;--green-bg:#dcfce7;
+      --shadow-sm:0 1px 2px rgba(0,0,0,0.08),inset 0 -0.5px 0 rgba(0,0,0,0.1);
+      --shadow-card:0 2px 4px rgba(10,10,10,0.04),0 8px 16px -4px rgba(10,10,10,0.06),0 0 0 0.5px rgba(10,10,10,0.1);
+    }
+    body{font-family:'Inter',-apple-system,sans-serif;font-size:15px;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+    .nav-inner{width:100%;max-width:1100px;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text);letter-spacing:-0.3px}
+    .nav-logo img{border-radius:7px;display:block;flex-shrink:0}
+    .nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+    .nav-links a{padding:6px 12px;font-size:14px;font-weight:500;color:var(--muted);border-radius:8px;transition:color 0.18s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-right{display:flex;align-items:center;gap:8px}
+    .btn-ghost{padding:8px 12px;font-size:14px;font-weight:500;color:var(--muted);border-radius:8px;transition:color 0.18s;display:inline-block}
+    .btn-ghost:hover{color:var(--text)}
+    .btn-solid{padding:9px 16px;font-size:14px;font-weight:600;color:var(--text);background:#fff;border-radius:8px;border:0.5px solid var(--border-dark);box-shadow:var(--shadow-sm);transition:all 0.15s;display:inline-block}
+    .btn-solid:hover{background:var(--gray-bg)}
+    @media(max-width:700px){.nav-links{display:none}.nav-inner{padding:0 20px}}
+    /* FOOTER */
+    footer{padding:48px 40px 28px;border-top:1px solid var(--border);background:#fff}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-top{display:flex;gap:40px;margin-bottom:40px}
+    .footer-brand{flex:0 0 240px}
+    .footer-brand-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin-bottom:12px}
+    .footer-brand-logo img{border-radius:6px;display:block}
+    .footer-brand p{font-size:13.5px;color:var(--muted);line-height:1.65}
+    .footer-cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .footer-col h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:12px}
+    .footer-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px;transition:color 0.18s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid var(--border)}
+    .footer-bottom p{font-size:12.5px;color:var(--faint)}
+    @media(max-width:900px){.footer-top{flex-direction:column}.footer-cols{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-cols{grid-template-columns:1fr}}
+    .page-hero{background:linear-gradient(180deg,#2563eb 0%,#4e80ee 16%,#6d97f1 27%,#9bb7f5 42%,#ccd9fa 64%,#e8effe 80%,#fff 100%);padding:88px 40px 96px;text-align:center}
+    .page-hero-inner{max-width:620px;margin:0 auto}
+    .page-label{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.85);background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:5px 14px;border-radius:100px;margin-bottom:22px}
+    .page-hero h1{font-size:52px;font-weight:600;color:#fff;letter-spacing:-0.04em;line-height:1.1;margin-bottom:18px}
+    .page-hero p{font-size:17px;color:rgba(255,255,255,0.72);line-height:1.65;max-width:480px;margin:0 auto}
+    /* STEPS */
+    .steps-section{max-width:780px;margin:0 auto;padding:72px 40px}
+    .steps-intro{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--blue);margin-bottom:36px}
+    .step{display:flex;gap:28px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--border)}
+    .step:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .step-num{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:var(--blue);color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+    .step-body h2{font-size:22px;font-weight:700;letter-spacing:-0.04em;margin-bottom:10px}
+    .step-body p{font-size:15px;color:var(--muted);line-height:1.75}
+    .step-body p+p{margin-top:10px}
+    .step-callout{background:var(--blue-dim);border-left:3px solid var(--blue);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:16px;font-size:14px;color:#1e40af;line-height:1.6}
+    /* ENGINE */
+    .engine-section{background:var(--gray-bg);padding:72px 40px}
+    .engine-inner{max-width:780px;margin:0 auto}
+    .engine-inner h2{font-size:28px;font-weight:700;letter-spacing:-0.04em;margin-bottom:10px}
+    .engine-inner .sub{font-size:15px;color:var(--muted);margin-bottom:36px;line-height:1.65}
+    .engine-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .engine-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+    .engine-card h4{font-size:14px;font-weight:700;margin-bottom:6px}
+    .engine-card p{font-size:13.5px;color:var(--muted);line-height:1.65}
+    /* CTA */
+    .cta-band{padding:64px 40px;text-align:center}
+    .cta-band h2{font-size:32px;font-weight:700;letter-spacing:-0.04em;margin-bottom:12px}
+    .cta-band p{font-size:16px;color:var(--muted);margin-bottom:28px}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:15px;font-weight:600;color:#fff;background:var(--blue);border-radius:10px;border:1px solid rgba(0,0,0,0.1);box-shadow:var(--shadow-sm);transition:all 0.15s}
+    .btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 4px 18px var(--blue-glow)}
+    .btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;font-size:15px;font-weight:500;color:var(--text);background:#fff;border-radius:10px;border:0.5px solid var(--border-dark);box-shadow:var(--shadow-sm);transition:all 0.15s;margin-left:10px}
+    .btn-secondary:hover{background:var(--gray-bg)}
+    @media(max-width:700px){.engine-grid{grid-template-columns:1fr}.step{flex-direction:column;gap:16px}.page-hero h1{font-size:36px}.steps-section,.engine-section,.cta-band{padding-left:20px;padding-right:20px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Keyflow",
+            "item": "https://keyflow.live"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "How It Works",
+            "item": "https://keyflow.live/how-it-works.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "How It Works",
+        "description": "How Keyflow simulates human typing",
+        "url": "https://keyflow.live/how-it-works.html",
+        "isPartOf": {"@id": "https://keyflow.live/#website"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+      Keyflow
+    </a>
+    <ul class="nav-links">
+      <li><a href="/features.html">Features</a></li>
+      <li><a href="/how-it-works.html" class="active">How it works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="/signin.html" class="btn-ghost">Sign in</a>
+      <a href="/get-started.html" class="btn-solid">Start free</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-label"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> How it works</div>
+    <h1>Three steps. Then just watch it type.</h1>
+    <p>No account needed for the free tier. No complicated setup. Install, paste, and go in under a minute.</p>
+  </div>
+</div>
+
+<div class="steps-section">
+  <div class="steps-intro">Setup guide</div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h2>Install the Chrome extension</h2>
+      <p>Download the zip from the homepage and unzip it. Before loading in Chrome, run the <strong>INSTALL-MAC.sh</strong> or <strong>INSTALL-WINDOWS.bat</strong> script inside the zip. This copies the extension to a permanent folder so it does not break if you delete the download.</p>
+      <p>Open Chrome and go to <code>chrome://extensions</code>. Enable Developer Mode (top right toggle), click <strong>Load unpacked</strong>, and select the folder the install script created.</p>
+      <div class="step-callout">Do not load the extension directly from your Downloads folder. Always use the install script or move the folder somewhere permanent first.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h2>Paste your text and configure</h2>
+      <p>Click the Keyflow icon in your Chrome toolbar. Paste your text into the box. Set your target WPM using the slider or pick a preset (Careful, Normal, Fast, Rush).</p>
+      <p>Toggle on whichever behaviour modes you want: Human rhythm, Typing mistakes, Paragraph pauses, Cursor drift, Session chunks. Each one adds a different layer of realism.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h2>Click into any text field and hit Run</h2>
+      <p>Set a start delay (2 to 10 seconds), click into your target field (Google Docs, a text box, anywhere), then hit Start Typing in the popup. Keyflow will begin after the delay and type your text exactly like a human would.</p>
+      <p>A live progress bar shows characters typed, percentage done, and estimated time remaining. Hit Stop any time to abort.</p>
+    </div>
+  </div>
+</div>
+
+<div class="engine-section">
+  <div class="engine-inner">
+    <h2>How the typing engine works</h2>
+    <p class="sub">Keyflow does not fire keystrokes at a fixed interval. It runs a timing algorithm on every character that accounts for word length, punctuation, and cumulative fatigue.</p>
+    <div class="engine-grid">
+      <div class="engine-card">
+        <h4>Variable inter-keystroke timing</h4>
+        <p>Each character delay is sampled from a distribution centred on your WPM, with randomness that grows with word length. Short common words type fast; long unfamiliar ones slow down.</p>
+      </div>
+      <div class="engine-card">
+        <h4>Punctuation-aware pausing</h4>
+        <p>Commas add 80 to 120 ms of hesitation. Periods, question marks, and exclamation points add 250 to 400 ms. The engine reads your text structure and reacts to it.</p>
+      </div>
+      <div class="engine-card">
+        <h4>Mistake and correction cycle</h4>
+        <p>When a mistake fires, the engine types an adjacent-key or transposition error, waits 100 to 250 ms (simulating recognition), then backspaces and retypes correctly.</p>
+      </div>
+      <div class="engine-card">
+        <h4>Platform compatibility layer</h4>
+        <p>Google Docs uses a custom event model that most auto-typers break on. Keyflow has a specific input handler for Docs that dispatches the correct keyboard and input events in the right sequence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Ready to try it?</h2>
+  <p>Free tier is 2 runs per week. No account, no card, just download and go.</p>
+  <a href="/install.html" class="btn-primary"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Install guide</a>
+  <a href="/features.html" class="btn-secondary">See all features</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+          Keyflow
+        </div>
+        <p>The Chrome extension that types for you with natural speed, realistic mistakes, and rhythm that looks genuinely human.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How it works</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/changelog.html">Changelog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="/install.html">Install guide</a>
+          <a href="/activate-license.html">Activate license</a>
+          <a href="/contact.html">Contact us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/terms.html">Terms of service</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="/refund.html">Refund policy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="/signin.html">Sign in</a>
+          <a href="/get-started.html">Get started</a>
+          <a href="/manage-license.html">Manage license</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Keyflow. All rights reserved.</p>
+      <p>Payments secured by Stripe</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

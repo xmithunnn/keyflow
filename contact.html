@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Keyflow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Get in touch with the Keyflow team for billing questions, license issues, or technical support.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://keyflow.live/contact.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Contact | Keyflow">
+  <meta property="og:description" content="Get in touch with the Keyflow team for billing questions, license issues, or technical support.">
+  <meta property="og:url"         content="https://keyflow.live/contact.html">
+  <meta property="og:image"       content="https://keyflow.live/og.png">
+  <meta property="og:site_name"   content="Keyflow">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Contact | Keyflow">
+  <meta name="twitter:description" content="Get in touch with the Keyflow team for billing questions, license issues, or technical support.">
+  <meta name="twitter:image"       content="https://keyflow.live/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#2563eb;--blue-hover:#1d4ed8;--blue-dim:rgba(37,99,235,0.08);
+      --blue-light:#eff6ff;--blue-glow:rgba(37,99,235,0.22);
+      --text:#111;--muted:#64748b;--faint:#94a3b8;
+      --border:rgba(0,0,0,0.1);--border-dark:rgba(0,0,0,0.16);
+      --gray-bg:#f7f7f7;--green:#16a34a;--green-bg:#dcfce7;
+      --shadow-sm:0 1px 2px rgba(0,0,0,0.08),inset 0 -0.5px 0 rgba(0,0,0,0.1);
+      --shadow-card:0 2px 4px rgba(10,10,10,0.04),0 8px 16px -4px rgba(10,10,10,0.06),0 0 0 0.5px rgba(10,10,10,0.1);
+    }
+    body{font-family:'Inter',-apple-system,sans-serif;font-size:15px;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;padding:0 32px;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text)}
+    .nav-logo img{border-radius:6px;display:block;flex-shrink:0}
+    .nav-back{font-size:13px;font-weight:500;color:var(--blue)}
+    .nav-back:hover{text-decoration:underline}
+    /* FOOTER */
+    footer{padding:48px 40px 28px;border-top:1px solid var(--border);background:#fff}
+    .footer-inner{max-width:1100px;margin:0 auto}
+    .footer-top{display:flex;gap:40px;margin-bottom:40px}
+    .footer-brand{flex:0 0 240px}
+    .footer-brand-logo{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin-bottom:12px}
+    .footer-brand-logo img{border-radius:6px;display:block}
+    .footer-brand p{font-size:13.5px;color:var(--muted);line-height:1.65}
+    .footer-cols{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .footer-col h4{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text);margin-bottom:12px}
+    .footer-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px;transition:color 0.18s}
+    .footer-col a:hover{color:var(--text)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid var(--border)}
+    .footer-bottom p{font-size:12.5px;color:var(--faint)}
+    @media(max-width:900px){.footer-top{flex-direction:column}.footer-cols{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-cols{grid-template-columns:1fr}}
+    .wrap{max-width:600px;margin:0 auto;padding:52px 24px 80px}
+    .pg-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--blue);margin-bottom:10px}
+    h1{font-size:32px;font-weight:700;letter-spacing:-0.04em;line-height:1.2;margin-bottom:6px}
+    .pg-sub{font-size:15px;color:var(--muted);line-height:1.65;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+    .email-card{background:#fff;border:1.5px solid var(--border-dark);border-radius:14px;padding:28px;margin-bottom:28px;box-shadow:var(--shadow-card)}
+    .email-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.7px;color:var(--faint);margin-bottom:10px}
+    .email-addr{font-size:22px;font-weight:700;letter-spacing:-0.04em;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .email-meta{font-size:13.5px;color:var(--muted);line-height:1.65}
+    .copy-btn{background:var(--blue-dim);border:none;border-radius:7px;padding:6px 12px;font-size:12px;font-weight:600;color:var(--blue);cursor:pointer;transition:all 0.15s;font-family:inherit;flex-shrink:0}
+    .copy-btn:hover{background:rgba(37,99,235,0.14)}
+    .copy-btn.copied{background:var(--green-bg);color:var(--green)}
+    .topic-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:32px}
+    .topic-card{border:1px solid var(--border);border-radius:12px;padding:18px;transition:border-color 0.15s,transform 0.15s}
+    .topic-card:hover{border-color:rgba(37,99,235,0.3);transform:translateY(-1px)}
+    .topic-icon{width:34px;height:34px;border-radius:9px;background:var(--blue-dim);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+    .topic-card h3{font-size:14px;font-weight:700;margin-bottom:4px}
+    .topic-card p{font-size:13px;color:var(--muted);line-height:1.6}
+    .section-h{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--faint);margin:36px 0 16px}
+    .faq-item{padding:14px 0;border-bottom:1px solid var(--border)}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{font-size:14.5px;font-weight:600;margin-bottom:6px}
+    .faq-a{font-size:14px;color:var(--muted);line-height:1.7}
+    footer{padding:18px 32px;font-size:12px;color:var(--faint);text-align:center;border-top:1px solid var(--border)}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Keyflow",
+            "item": "https://keyflow.live"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://keyflow.live/contact.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Contact",
+        "description": "Get in touch with the Keyflow team",
+        "url": "https://keyflow.live/contact.html",
+        "isPartOf": {"@id": "https://keyflow.live/#website"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/favicon.png" alt="Keyflow" width="22" height="22">
+    Keyflow
+  </a>
+  <a href="/" class="nav-back">&larr; Back to home</a>
+</nav>
+
+<div class="wrap">
+  <div class="pg-label">Support</div>
+  <h1>Get in touch</h1>
+  <p class="pg-sub">We are a small team and we read every email. Most replies go out within a few hours, always within 24.</p>
+
+  <div class="email-card">
+    <div class="email-label">Email</div>
+    <div class="email-addr">
+      <a href="mailto:hello@keyflow.live" style="color:var(--blue)">hello@keyflow.live</a>
+      <button class="copy-btn" id="copy-email" onclick="copyEmail()">Copy</button>
+    </div>
+    <div class="email-meta">Response time: usually same day, always within 24 hours. Include your order confirmation or license key if contacting about a purchase.</div>
+  </div>
+
+  <div class="topic-grid">
+    <div class="topic-card">
+      <div class="topic-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.78 7.78 5.5 5.5 0 0 1 7.77-7.77zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div>
+      <h3>License and billing</h3>
+      <p>Missing key, double charge, upgrading plan, or managing your Stripe subscription.</p>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+      <h3>Technical issues</h3>
+      <p>Extension not working, trouble with a specific site, or install problems.</p>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <h3>Feature requests</h3>
+      <p>Have an idea for a feature or WPM preset? We read all of them.</p>
+    </div>
+    <div class="topic-card">
+      <div class="topic-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Privacy and data</h3>
+      <p>Questions about what we collect or requests to delete your data.</p>
+    </div>
+  </div>
+
+  <div class="section-h">Quick answers</div>
+
+  <div class="faq-item">
+    <div class="faq-q">I paid but never received my license key.</div>
+    <div class="faq-a">Check your spam folder first. The key comes from <strong>no-reply@resend.dev</strong> within 60 seconds of payment. If it is not there, email us with your order receipt and we will resend it immediately.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I get a refund?</div>
+    <div class="faq-a">All sales are final. Keyflow has a free tier so you can test it fully before paying. See our <a href="/refund.html" style="color:var(--blue)">Refund Policy</a> for details.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do I cancel my subscription?</div>
+    <div class="faq-a">Log into the <a href="https://billing.stripe.com/p/login/keyflow" target="_blank" style="color:var(--blue)">Stripe billing portal</a> with the email you used at checkout. You can cancel there instantly. Your access continues until the end of the billing period.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">My extension stopped working after I deleted the download.</div>
+    <div class="faq-a">This happens when the extension was loaded from a temporary location. Re-download, run the INSTALL script inside the zip, and reload the extension from the permanent path. See the <a href="/install.html" style="color:var(--blue)">install guide</a>.</div>
+  </div>
+</div>
+
+<footer>2025 Keyflow. All rights reserved. - <a href="/privacy.html" style="color:var(--blue)">Privacy</a> - <a href="/terms.html" style="color:var(--blue)">Terms</a></footer>
+
+<script>
+function copyEmail() {
+  navigator.clipboard.writeText('hello@keyflow.live').then(() => {
+    const btn = document.getElementById('copy-email');
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>
